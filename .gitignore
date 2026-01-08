@@ -1,0 +1,18 @@
+# Virtual enviroment (venv)
+venv/
+.venv/
+env/
+bin/
+
+# Python cache and compiled files
+__pycache__/
+*.py[cod]
+test__pycache__/
+src/__pycache__/
+
+# Enviroment variables and secrets
+.env
+
+# IDE specific files
+.vscode/
+.idea
