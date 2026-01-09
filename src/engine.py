@@ -21,6 +21,19 @@ class SOCEngine:
                 weights=list(self.domains.values())
             )[0]
 
-        return selected_domain 
+        return selected_domain
 
+    def calculate_reward(self, is_correct, difficulty):
+        if not is_correct:
+            return 0
+
+        rewards = {
+                1:10,
+                2:25,
+                3:50
+        }
+
+        gain = rewards.get(difficulty, 0)
+        self.user_xp += gain 
+        return gain
 
